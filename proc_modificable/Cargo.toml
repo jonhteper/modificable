@@ -1,0 +1,17 @@
+[package]
+name = "proc_modificable"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "proc_modificable"
+proc-macro = true
+path = "src/lib.rs"
+
+[dependencies]
+proc-macro2 = "1.0.89"
+quote = "1.0.37"
+syn = { version = "2.0.85", features = ["full"] }
+
+[features]
+testing = []

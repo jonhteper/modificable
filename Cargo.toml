@@ -1,0 +1,21 @@
+workspace = { members = ["proc_modificable"] }
+
+[package]
+name = "modificable"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+chrono = { version = "0.4.38", optional = true }
+proc_modificable = { path = "proc_modificable" }
+
+[dev-dependencies]
+chrono = "0.4.38"
+derived = "0.4.2"
+
+[features]
+testing = ["proc_modificable/testing"]
+modifications_impl = []
+chrono = ["dep:chrono"]
+modifications_utc = ["modifications_impl", "chrono"]
+modifications_local = ["modifications_impl", "chrono"]
