@@ -96,5 +96,5 @@ pub fn path_to_modifications_trait() -> TokenStream {
     quote! { crate::Modifications }
 
     #[cfg(not(feature = "testing"))]
-    quote! { ::modificable::Modifications }
+    quote! { ::modifications::Modifications }
 }
