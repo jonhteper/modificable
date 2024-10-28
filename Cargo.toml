@@ -1,7 +1,7 @@
 workspace = { members = ["proc_modificable"] }
 
 [package]
-name = "modificable"
+name = "modifications"
 version = "0.1.0"
 edition = "2021"
 
