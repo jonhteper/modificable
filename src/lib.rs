@@ -1,4 +1,4 @@
-pub use proc_modificable::Modificable;
+pub use proc_modifications::Modificable;
 
 #[cfg(feature = "testing")]
 #[cfg(test)]

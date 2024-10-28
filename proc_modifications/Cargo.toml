@@ -1,10 +1,10 @@
 [package]
-name = "proc_modificable"
+name = "proc_modifications"
 version = "0.1.0"
 edition = "2021"
 
 [lib]
-name = "proc_modificable"
+name = "proc_modifications"
 proc-macro = true
 path = "src/lib.rs"
 

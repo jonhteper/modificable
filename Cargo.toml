@@ -1,4 +1,4 @@
-workspace = { members = ["proc_modificable"] }
+workspace = { members = ["proc_modifications"] }
 
 [package]
 name = "modifications"
@@ -7,14 +7,14 @@ edition = "2021"
 
 [dependencies]
 chrono = { version = "0.4.38", optional = true }
-proc_modificable = { path = "proc_modificable" }
+proc_modifications = { path = "proc_modifications" }
 
 [dev-dependencies]
 chrono = "0.4.38"
 derived = "0.4.2"
 
 [features]
-testing = ["proc_modificable/testing"]
+testing = ["proc_modifications/testing"]
 modifications_impl = []
 chrono = ["dep:chrono"]
 modifications_utc = ["modifications_impl", "chrono"]
