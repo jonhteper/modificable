@@ -52,6 +52,7 @@ pub fn modificable_macro(input: TokenStream) -> TokenStream {
             quote! {
                 #[doc = #docs_str]
                 pub fn #fn_name (&mut self, value: #ty) -> bool {
+                    use #modifications_trait;
                     if value == self.#field_name {
                         return false;
                     }
@@ -66,7 +67,6 @@ pub fn modificable_macro(input: TokenStream) -> TokenStream {
         .collect::<Vec<TokenStream>>();
 
     let expanded = quote! {
-        use #modifications_trait ;
         impl<#(#lifetimes,)* #(#type_params),*>  #struct_name #where_clause {
             #(#setters_funcs)*
         }
